@@ -28,6 +28,10 @@ listContainers.addEventListener("click", function(e){
     }
 }, false);
 
+function clearItems(){
+    listContainers.innerHTML = '';
+}
+
 function saveData(){
     localStorage.setItem("data", listContainer.innerHTML);
 }
@@ -36,8 +40,5 @@ function showData(){
     listContainer.innerHTML = localStorage.getItem("data");
 }
 
-function clearItems(){
-    listContainers.innerHTML = '';
-}
 
 showData();
